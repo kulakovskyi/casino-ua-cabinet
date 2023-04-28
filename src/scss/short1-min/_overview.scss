@@ -1,0 +1,465 @@
+.overview {
+  padding: 130px 0 50px 0;
+  background: #4C2233 url("../../assets/images/Group-3352.jpg") no-repeat;
+  background-size: cover;
+
+  &__breadcrumbs {
+    display: inline-flex;
+    margin: 0 0 38px 0;
+
+    &-link {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 10px;
+      letter-spacing: 0.01em;
+      color: rgba(255, 255, 255, 0.4);
+      display: inline-block;
+      position: relative;
+      transition: .3s ease;
+
+      &:hover {
+        color: $blue;
+      }
+
+      &:not(:last-child) {
+        margin: 0 20px 0 0;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 1px;
+          height: 11px;
+          background: rgba(255, 255, 255, 0.4);
+          top: 50%;
+          right: -10px;
+          transform: translate(0, -50%);
+
+        }
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 0 73px 0;
+
+  }
+
+  &__info {
+    display: inline-flex;
+    align-items: center;
+
+    &-image {
+      max-width: 320px;
+      border-radius: 14px;
+      margin: 0 25px 0 0;
+
+      img {
+        max-width: 100%;
+
+      }
+    }
+
+    &-title__wrapper {
+      display: inline-flex;
+      align-items: center;
+      margin: 0 0 10px 0;
+    }
+
+    &-title {
+      font-size: 34px;
+      line-height: 26px;
+      letter-spacing: 0.01em;
+      color: #FFFFFF;
+      margin: 0 11px 0 0;
+    }
+
+    &-aside {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+      padding: 4px 15px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+    }
+
+    &-rating {
+      display: flex;
+      align-items: center;
+      margin: 0 0 25px 0;
+
+      &__counter {
+        font-size: 11px;
+        line-height: 15px;
+        letter-spacing: 0.02em;
+        color: rgba(255, 255, 255, 0.5);
+        margin: 0 10px 0 0;
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+      max-width: 200px;
+    }
+
+    &-link {
+      display: inline-block;
+      padding: 14px 48px;
+      background: $blue;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 20px;
+      letter-spacing: 0.04em;
+      color: #FFFFFF;
+      transition: .3s ease;
+
+      &:hover {
+        background: $blue-hover;
+      }
+    }
+
+  }
+
+  &__spins {
+    &-wrapper{
+      display: flex;
+    }
+
+    &-code {
+      max-width: 400px;
+      margin: 0 0 0 auto;
+      position: relative;
+    }
+
+    &-set{
+      position: absolute;
+      right: 0;
+      top: -54px;
+      &_open{
+        display: none;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 22px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #12FF1F;
+        text-align: center;
+        padding: 6px 17px;
+        background: #114C14;
+        border-radius: 8px;
+        width: 110px;
+      }
+
+      &_closed{
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 22px;
+        align-items: center;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #FD5599;
+        background: #4C2233;
+        padding: 6px 17px;
+        border-radius: 8px;
+        width: 110px;
+      }
+    }
+
+    input {
+      width: 100%;
+      display: inline-block;
+      margin: 0 0 20px 0;
+      cursor: pointer;
+      padding: 12px 13px;
+      background: rgba(247, 246, 249, 0.1) url("../../assets/images/overview/input-icon.svg") no-repeat;
+      background-position: 96% center;
+      border: 1px dashed rgba(206, 209, 212, 0.4);
+      border-radius: 8px;
+
+      &::placeholder {
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 0.04em;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+
+    &-row {
+      display: flex;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -0.004em;
+      color: rgba(255, 255, 255, 0.7);
+      flex-wrap: nowrap;
+    }
+
+
+    &-date,
+    &-date-lost{
+      margin: 0 15px 0 0;
+      display: flex;
+
+      span {
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.5);
+        white-space: nowrap;
+        margin:0 3px 0 0;
+      }
+
+    }
+
+    &-date-lost{
+      margin: 0;
+    }
+
+
+
+    .lost {
+      margin: 0;
+    }
+  }
+
+  &__tabs {
+    position: relative;
+    display: flex;
+    padding: 0 15px 18px 15px;
+    max-width: 1350px;
+    margin: 0 auto;
+    z-index: 3;
+    overflow-x: scroll;
+
+
+    &-link {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: 0.02em;
+      color: rgba(255, 255, 255, 0.5);
+      display: inline-block;
+      position: relative;
+      transition: .3s ease;
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 0px;
+        background: #0556F8;
+        border-radius: 4px;
+        bottom: -18px;
+        left: 50%;
+        z-index: 5;
+        overflow: initial;
+        transform: translate(-50%, 0);
+        transition: .3s ease;
+
+      }
+
+      &._active::after {
+        height: 5px;
+      }
+
+      &._active {
+        color: #FFFFFF;
+      }
+
+      &:not(:last-child) {
+        margin: 0 34px 0 0;
+      }
+
+      &:hover::after {
+        height: 5px;
+      }
+
+      &:hover {
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+
+@include breakpoint(1336px) {
+  .overview {
+    &__spins-code {
+      width: 400px;
+    }
+
+  }
+}
+
+@include breakpoint(1194px) {
+  .overview {
+    &__row {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0 0 20px 0;
+    }
+
+    &__info {
+      margin: 0 0 20px 0;
+    }
+
+    &__spins{
+      &-set{
+        position: absolute;
+        right: -140px;
+        top: 0;
+
+      }
+    }
+
+    &__spins-row {
+      flex-direction: row;
+    }
+
+    &__spins-code {
+      margin: 0;
+    }
+  }
+}
+
+@include breakpoint(1024px) {
+  .overview {
+    padding: 95px 0 50px 0;
+  }
+
+}
+
+@include breakpoint(640px) {
+  .overview {
+    background: #4C2233 url("../../assets/images/bg-mob-2.jpg") no-repeat;
+    &__info {
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      margin:0 0 10px 0;
+
+      &-title__wrapper {
+        justify-content: center;
+        width: 100%;
+        margin-right: 0;
+      }
+
+      &-title {
+        margin: 0;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 26px;
+      }
+
+      &-aside {
+        display: none;
+      }
+
+      &-rating {
+        justify-content: center;
+        margin:0 0 20px 0;
+      }
+
+      &-image {
+        margin: 0 0 20px 0;
+        max-width: 100%;
+        text-align: center;
+
+        img {
+          object-fit: cover;
+        }
+      }
+
+      &-buttons {
+        max-width: 100%;
+      }
+
+      &-link {
+        flex: 1 1 auto;
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+
+    &__row {
+      align-items: center;
+    }
+
+    &__spins {
+      width: 100%;
+      &-date{
+        margin:0 20px 0 0;
+      }
+
+      &-code {
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+        position: static;
+      }
+
+      &-row {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: 12px;
+
+      }
+
+      &-set{
+        position: absolute;
+        right: auto;
+        left: 8px;
+        top: 87px;
+
+        &_open{
+          display: none;
+          font-size: 13px;
+          line-height: 17px;
+          width: 92px;
+        }
+
+        &_closed{
+          font-size: 13px;
+          line-height: 17px;
+          width: 92px;
+        }
+
+      }
+    }
+
+    &__tabs{
+      &-link{
+        font-size: 17px;
+        line-height: 20px;
+        &:not(:last-child){
+          margin:0 25px 0 0;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(375px) {
+  .overview{
+    &__spins{
+      &-row{
+        flex-direction: column;
+      }
+      &-date{
+        margin: 0;
+      }
+
+
+      &-wrapper{
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}

@@ -1,7 +1,10 @@
 .wrapper {
   display: flex;
-  padding: 40px 0 60px 0;
+  padding: 50px 0 60px 0;
   overflow: hidden;
+  background: #E7EAEE;
+  border-radius: 50px;
+  margin-top: -52px;
 
   &__container{
     width: 100%;
@@ -16,7 +19,8 @@
 
 @media screen and (max-width: 1024px){
   .wrapper{
-    padding: 20px 0 30px 0;
+    padding: 40px 0 30px 0;
+    border-radius: 20px;
     &__container{
       flex-direction: column;
       padding: 0 !important;

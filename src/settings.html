@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@include('partials/settings/head.html')
+
+<body class="body">
+@include('partials/short1-min/header.html')
+@include('partials/settings/overview.html')
+
+<div class="wrapper">
+    <div class="wrapper__container">
+
+        <main class="main">
+            @include('partials/settings/settings.html')
+            @include('partials/settings/password.html')
+            @include('partials/settings/delete.html')
+
+        </main>
+        <aside class="aside">
+            @include('partials/account/user.html')
+        </aside>
+    </div>
+</div>
+</body>
+
+

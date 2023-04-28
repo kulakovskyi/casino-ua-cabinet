@@ -1,0 +1,47 @@
+.statistics{
+  width: 100%;
+  padding: 25px;
+  background: $white;
+  border-radius: 14px;
+  &__title{
+    font-family: $font-firs-reg;
+    font-size: 17px;
+    line-height: 17px;
+    letter-spacing: -0.004em;
+    color: $blue-darken;
+    margin: 0 0 20px 0;
+  }
+  &__item{
+    &-title{
+      font-family: $font-firs-reg;
+      font-size: 13px;
+      line-height: 15px;
+      color: $grey-text;
+      margin: 0 0 5px 0;
+    }
+    &-text{
+      font-family: $font-firs-reg;
+      font-size: 15px;
+      line-height: 17px;
+      letter-spacing: -0.004em;
+      color: $blue-darken;
+    }
+    &:not(:last-child){
+      margin: 0 0 15px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .statistics{
+    margin: 0 15px;
+    width: calc(50% - 25px);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .statistics{
+    margin: 0 15px;
+    width: calc(100% - 30px);
+  }
+}

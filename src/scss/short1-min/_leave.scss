@@ -1,0 +1,186 @@
+.leave {
+  background: $white;
+  border-radius: 20px;
+  padding: 40px 35px;
+  margin: 0 0 20px 0;
+
+  &__title {
+    font-family: $font-firs-semb;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    color: $blue-darken;
+    margin: 0 0 15px 0;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__img {
+    min-width: 70px;
+    max-width: 70px;
+    margin: 0 20px 0 0;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &__form {
+    width: 100%;
+
+    &-plus-input,
+    &-minus-input {
+      color: $blue-darken;
+      width: 100%;
+      padding: 12px 15px 11px;
+      border-radius: 4px;
+      background: $grey-white-bg;
+      margin: 0 0 10px 0;
+
+      &::placeholder {
+        font-family: $font-firs-reg;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: -0.004em;
+        color: $green;
+      }
+    }
+
+    &-text-input {
+      color: $blue-darken;
+      width: 100%;
+      padding: 12px 15px 11px;
+      border-radius: 4px;
+      background: $grey-white-bg;
+      height: 130px;
+      resize: none;
+      margin: 0 0 20px 0;
+
+      &::placeholder {
+        font-family: $font-firs-reg;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: -0.004em;
+        color: $green;
+      }
+    }
+
+    &-wrap{
+      display: flex;
+      justify-content: space-between;
+    }
+    &-star{
+      display: flex;
+      align-items: center;
+      &-text{
+        font-family: $font-firs-reg;
+        font-size: 17px;
+        line-height: 20px;
+        color: $blue-darken;
+        margin: 0 10px 0 0;
+      }
+    }
+    &-btn{
+      display: inline-block;
+      padding: 14px 40px 13px;
+      border-radius: 8px;
+      font-family: $font-firs-reg;
+      background: $blue;
+      color: $white;
+      font-size: 13px;
+      line-height: 20px;
+      transition: background-color .3s ease;
+      &:hover{
+        background: $blue-hover;
+      }
+    }
+  }
+
+}
+
+
+fieldset, label {
+  margin: 0;
+  padding: 0;
+}
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+  border: none;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 5px;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label:before {
+  width: 21px;
+  height: 21px;
+  display: block;
+  content: "";
+}
+
+.rating > label {
+  cursor: pointer;
+  background: url("../img/star-grey.svg") no-repeat center/contain;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  width: 21px;
+  height: 21px;
+  background: url("../img/star-orange.svg") no-repeat center/contain;
+}
+
+/* hover previous stars in list */
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label {
+  width: 21px;
+  height: 21px;
+  background: url("../img/star-orange.svg") no-repeat center/contain;
+}
+
+@media screen and (max-width: 1024px){
+  .leave{
+    padding: 20px 5px;
+    width: calc(100% - 30px);
+    margin: 0 auto 20px;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .leave{
+    border-radius: 16px;
+    &__row{
+      flex-direction: column;
+    }
+    &__img{
+      margin: 0 0 10px 0;
+    }
+    &__form{
+      &-text-input{
+        margin: 0 0 20px 0;
+      }
+      &-wrap{
+        flex-direction: column;
+      }
+      &-star{
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+}

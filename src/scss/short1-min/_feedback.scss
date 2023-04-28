@@ -1,0 +1,269 @@
+.feedback{
+  background: $white;
+  border-radius: 20px;
+  padding: 40px 35px;
+  margin: 0 0 20px 0;
+  &__title{
+    font-family: $font-firs-semb;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    color: $blue-darken;
+    margin: 0 0 15px 0;
+  }
+  &__comment{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #CAE0E0;
+    &:not(:last-child){
+      margin: 0 0 30px 0;
+    }
+    &-user{
+      margin: 0 0 20px 0;
+      &-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0 0 10px 0;
+      }
+      &-img{
+        max-width: 70px;
+        margin: 0 15px 0 0;
+        img{
+          border-radius: 50%;
+        }
+      }
+      &-info{
+        &-row{
+          display: flex;
+          align-items: center;
+          margin: 0 0 2px 0 ;
+        }
+        &-name{
+          font-family: $font-firs-reg;
+          font-size: 15px;
+          line-height: 20px;
+          color: $blue-darken;
+          margin: 0 5px 0 0;
+        }
+        &-rating{
+          display: flex;
+          align-items: center;
+          font-family: $font-firs-semb;
+          font-size: 15px;
+          line-height: 10px;
+          color: $orange;
+          img{
+            max-width: 11px;
+            margin: 0 5px 0 0;
+          }
+        }
+        &-date{
+          font-family: $font-firs-reg;
+          font-size: 11px;
+          line-height: 20px;
+          color: $green;
+        }
+      }
+      &-question{
+        &-text{
+          font-family: $font-firs-reg;
+          font-size: 15px;
+          line-height: 23px;
+          color: $blue-darken;
+          margin: 0 0 5px 0;
+          span{
+            color: $blue;
+            cursor: pointer;
+          }
+        }
+        &-casino{
+          display: flex;
+          align-items: center;
+          margin: 0 0 15px 0;
+          &-img{
+            max-width: 32px;
+            margin: 0 7px 0 0;
+
+            img{
+              border-radius: 4px;
+            }
+          }
+          &-rating{
+            font-family: $font-firs-reg;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            line-height: 15px;
+            letter-spacing: 0.02em;
+            color: $blue-darken;
+            img{
+              max-width: 17px;
+              margin: 0 5px 0 0;
+            }
+          }
+        }
+      }
+      &-answer{
+        display: flex;
+        align-items: center;
+        &-link{
+          font-family: $font-firs-reg;
+          font-size: 14px;
+          line-height: 17px;
+          color: $blue;
+          margin: 0 10px 0 0;
+          transition: color .3s ease;
+          &:hover{
+            color: $blue-hover;
+          }
+
+        }
+        &-like{
+          cursor: pointer;
+          display: inline-block;
+          padding: 8px 11px 7px 30px;
+          border-radius: 100px;
+          background: rgba(255, 0, 107, 0.14) url("../img/like-one.svg") no-repeat 10px center/13px 11px;
+          color: $green;
+          font-family: $font-firs-reg;
+          font-size: 12px;
+          line-height: 12px;
+          transition: background .3s ease ;
+          &._active{
+            background: rgba(255, 0, 107, 0.14) url("../img/like-two.svg") no-repeat 10px center/13px 11px;
+          }
+          &:hover{
+            background: rgba(255, 0, 107, 0.14) url("../img/like-two.svg") no-repeat 10px center/13px 11px;
+          }
+        }
+      }
+    }
+    &-mod{
+      padding-left: 20px;
+      border-left: 1px dashed #CAE0E0;
+      &:not(:last-child){
+        margin: 0 0 15px 0;
+      }
+
+      &-two{
+        margin-left: 20px !important;
+      }
+      &-wrap{
+        margin: 0 0 10px 0;
+      }
+      &-info{
+        display: flex;
+        align-items: center;
+        margin: 0 0 5px 0;
+        &-casino{
+          font-family: $font-firs-semb;
+          color: $white;
+          border-radius: 10px;
+          background: $blue;
+          font-size: 14px;
+          line-height: 14px;
+          padding: 8px 17px 7px;
+          margin: 0 10px 0 0;
+          span{
+            font-style: italic;
+          }
+        }
+        &-doc{
+          font-family: $font-firs-reg;
+          font-size: 12px;
+          line-height: 12px;
+          color: $green;
+          padding: 7px 11px 6px;
+          border: 1px solid $green-whiter;
+          border-radius: 100px;
+
+        }
+      }
+      &-date{
+        font-family: $font-firs-reg;
+        font-size: 11px;
+        line-height: 14px;
+        color: $green;
+      }
+      &-text{
+        font-family: $font-firs-reg;
+        font-size: 15px;
+        line-height: 28px;
+        color: $blue-darken;
+        span{
+          color: $blue;
+          cursor: pointer;
+        }
+      }
+    }
+    &-another{
+      padding-left: 20px;
+      border-left: 1px dashed #CAE0E0;
+      &:not(:last-child){
+        margin: 0 0 15px 0;
+      }
+      &-two{
+        margin-left: 20px !important;
+      }
+      &-title{
+        font-family: $font-firs-reg;
+        font-size: 13px;
+        line-height: 18px;
+        color: $green;
+        margin: 0 0 5px 0;
+      }
+      &-text{
+        font-family: $font-firs-reg;
+        font-size: 15px;
+        line-height: 28px;
+        color: $blue-darken;
+        span{
+          color: $blue;
+          cursor: pointer;
+        }
+      }
+      &-answer{
+        display: flex;
+        align-items: center;
+        &-link{
+          font-family: $font-firs-reg;
+          font-size: 14px;
+          line-height: 17px;
+          color: $blue;
+          margin: 0 10px 0 0;
+          transition: color .3s ease;
+          &:hover{
+            color: $blue-hover;
+          }
+
+        }
+        &-like{
+          cursor: pointer;
+          display: inline-block;
+          padding: 8px 11px 7px 30px;
+          border-radius: 100px;
+          background: rgba(255, 0, 107, 0.14) url("../img/like-one.svg") no-repeat 10px center/13px 11px;
+          color: $green;
+          font-family: $font-firs-reg;
+          font-size: 12px;
+          line-height: 12px;
+          transition: background .3s ease ;
+          &._active{
+            background: rgba(255, 0, 107, 0.14) url("../img/like-two.svg") no-repeat 10px center/13px 11px;
+          }
+          &:hover{
+            background: rgba(255, 0, 107, 0.14) url("../img/like-two.svg") no-repeat 10px center/13px 11px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1024px){
+  .feedback{
+    background: $grey-white-bg;
+    padding: 5px 0 0;
+  }
+}

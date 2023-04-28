@@ -1,0 +1,278 @@
+.delete {
+  margin: 0 0 20px 0;
+  background: $white;
+  border-radius: 20px;
+  padding: 55px;
+
+  &__container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-family: $font-firs-semb;
+    font-size: 32px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: $blue-darken;
+    margin: 0 0 5px 0;
+  }
+
+  &__text {
+    font-family: $font-firs-reg;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: $grey-text;
+    margin: 0 0 25px 0;
+  }
+
+  &__btn {
+    cursor: pointer;
+    align-self: center;
+    display: inline-block;
+    padding: 15px 90px 14px;
+    font-family: $font-firs-semb;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $red;
+    border: 1px solid $red;
+    border-radius: 8px;
+    transition: background .3s ease;
+
+    &:hover {
+      background: $grey-white-bg;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .delete {
+    width: calc(100% - 30px);
+    margin: 0 15px 20px 15px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .delete {
+    padding: 34px 20px;
+
+    &__title {
+      font-size: 28px;
+      line-height: 30px;
+      margin: 0 0 5px 0;
+    }
+
+    &__text {
+      font-size: 13px;
+      line-height: 18px;
+      margin: 0 0 20px 0;
+    }
+
+    &__btn {
+      width: 100%;
+      padding: 15px 30px 14px;
+
+
+    }
+  }
+}
+
+.popup-delete {
+  position: fixed;
+  z-index: 120;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(50px);
+  transition: opacity .7s ease, visibility .7s ease;
+  &._hidden{
+    opacity: 0;
+    visibility: hidden;
+  }
+  &__wrapper{
+    max-width: 630px;
+    padding: 0 15px;
+  }
+
+  &__title{
+    font-family: $font-firs-semb;
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: $white;
+    text-align: center;
+    margin: 0 0 25px 0;
+    span{
+      &:first-child{
+        color: $blue;
+      }
+      &:nth-child(2){
+        font-style: italic;
+      }
+    }
+  }
+  &__info{
+    position: relative;
+    padding: 50px 120px 60px;
+    background: $grey-white-bg;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-btn-close{
+      cursor: pointer;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 24px;
+      height: 24px;
+      background: url("../img/btn-close.svg") no-repeat 0 0/contain;
+      transition: transform $transition;
+      &:hover{
+        transform: scale(1.06);
+      }
+    }
+    &-img{
+      margin: 0 0 20px 0;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $red;
+      border-radius: 14px;
+
+    }
+    &-title{
+      font-family: $font-firs-semb;
+      font-size: 32px;
+      line-height: 48px;
+      letter-spacing: 0.01em;
+      color: $blue-darken;
+      text-align: center;
+      margin: 0 0 5px 0;
+    }
+    &-text{
+      font-family: $font-firs-reg;
+      font-size: 15px;
+      line-height: 22px;
+      text-align: center;
+      letter-spacing: -0.004em;
+      color: $green;
+      max-width: 280px;
+      margin: 0 auto 30px;
+    }
+    &-link{
+      font-size: 15px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.04em;
+      font-family: $font-firs-reg;
+      display: inline-block;
+      padding: 14px 90px 13px;
+      border-radius: 8px;
+      color: $red;
+      border: 1px solid $red;
+      background: transparent ;
+      transition: background-color .3s ease;
+      &:hover{
+        background: $white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .popup-delete{
+    &__title{
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (max-width: 620px) and (orientation: portrait) {
+  .popup-delete{
+    align-items: flex-end;
+    &__wrapper{
+      max-width: 100%;
+      min-width: 100%;
+      padding: 0 ;
+    }
+    &__info{
+      padding: 40px 15px 20px;
+      border-radius: 20px 20px 0 0 ;
+      &-img{
+        width: 74px;
+        height: 74px;
+        margin: 0 0 20px 0;
+        img{
+          max-width: 52px;
+        }
+      }
+      &-title{
+        font-size: 24px;
+        line-height: 30px;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .popup-delete{
+    &__info{
+      &-link{
+        font-size: 15px;
+        line-height: 20px;
+        padding: 15px 15px 14px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 920px) and (max-height: 450px) and (orientation: landscape){
+  .popup-delete{
+    &__wrapper{
+      transform: scale(.8);
+    }
+  }
+}
+
+@media screen and (max-width: 920px) and (max-height: 412px) and (orientation: landscape){
+  .popup-delete{
+    &__wrapper{
+      transform: scale(.7);
+    }
+  }
+}
+
+@media screen and (max-width: 920px) and (max-height: 375px) and (orientation: landscape){
+  .popup-delete{
+    &__wrapper{
+      transform: scale(.6);
+    }
+  }
+}
+
+@media screen and (max-width: 920px) and (max-height: 320px) and (orientation: landscape){
+  .popup-delete{
+    &__wrapper{
+      transform: scale(.5);
+    }
+  }
+}

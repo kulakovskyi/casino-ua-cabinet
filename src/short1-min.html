@@ -4,16 +4,20 @@
 @include('partials/short1-min/head.html')
 
 <body class="body">
+@include('partials/short1-min/header.html')
+@include('partials/short1-min/overview.html')
+
 <div class="wrapper">
     <div class="wrapper__container">
+
         <main class="main">
-            @include('partials/short1-min/best.html')
+            @include('partials/short1-min/feedback.html')
+            @include('partials/short1-min/leave.html')
 
         </main>
         <aside class="aside">
             @include('partials/aside-test.html')
         </aside>
-        @include('partials/short1-min/popup.html')
     </div>
 </div>
 </body>
