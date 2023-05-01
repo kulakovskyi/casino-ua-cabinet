@@ -1,6 +1,6 @@
 const popupBtnOpen = document.querySelector('.popup-btn-click')
-const popupBtnClose = document.querySelector('.popup-year__info-btn-close')
-const popUpSubscribe = document.querySelector('.popup-year')
+const popupBtnClose = document.querySelector('.popup-login__info-btn-close')
+const popUpSubscribe = document.querySelector('.popup-login')
 const body = document.querySelector('body')
 
 popupBtnOpen.addEventListener('click', () => {

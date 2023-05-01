@@ -1,0 +1,199 @@
+.bonus {
+  margin: 0 0 20px 0;
+  &__container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  &__link {
+    align-self: center;
+    display: inline-block;
+    padding: 15px 120px 14px;
+    border-radius: 8px;
+    font-family: $font-firs-semb;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    background: $blue;
+    color: $white;
+    transition: background-color .3s ease;
+
+    &:hover {
+      background: $blue-hover;
+    }
+  }
+  &__info {
+    padding: 40px 50px;
+    background: $white;
+    border-radius: 20px;
+    margin: 0 0 30px 0;
+
+
+    h2,h3,h4,h5,h6{
+      font-family: $font-firs-semb;
+      letter-spacing: -0.01em;
+      color: $blue-darken;
+      margin: 0 0 10px 0;
+    }
+    h2{
+      font-size: 28px;
+      line-height: 38px;
+    }
+    h3{
+      font-size: 26px;
+      line-height: 36px;
+    }
+    h4{
+      font-size: 24px;
+      line-height: 34px;
+    }
+    h5{
+      font-size: 22px;
+      line-height: 32px;
+    }
+    h6{
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    p{
+      font-family: $font-firs-reg;
+      font-size: 15px;
+      line-height: 25px;
+      color: $blue-darken;
+      margin: 0 0 10px 0;
+    }
+     ol {
+      list-style-type: none;
+      margin: 0 0 25px 0;
+      counter-reset: counter-ol;
+       li{
+         position: relative;
+         padding-left: 35px;
+         font-family: $font-firs-reg;
+         font-size: 15px;
+         line-height: 25px;
+         color: $blue-darken;
+         &:not(:last-child){
+           margin: 0 0 15px 0;
+         }
+
+         &::before{
+           position: absolute;
+           top: 2px;
+           left: 0;
+           counter-increment: counter-ol;
+           content: counter(counter-ol) " ";
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           font-family: $font-firs-semb;
+           color: $white;
+           min-width: 28px;
+           min-height: 28px;
+           font-size: 15px;
+           line-height: 25px;
+           border-radius: 50%;
+           background: $blue;
+         }
+       }
+    }
+    ul {
+      list-style-type: none;
+      margin: 0 0 25px 0;
+      li{
+        position: relative;
+        padding-left: 35px;
+        font-family: $font-firs-reg;
+        font-size: 15px;
+        line-height: 25px;
+        color: $blue-darken;
+        &:not(:last-child){
+          margin: 0 0 15px 0;
+        }
+        &::before{
+          position: absolute;
+          top: 2px;
+          left: 0;
+          content: "•";
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: $font-firs-semb;
+          color: $white;
+          min-width: 28px;
+          min-height: 28px;
+          font-size: 25px;
+          line-height: 25px;
+          border-radius: 50%;
+          background: $blue;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .bonus{
+    &__info{
+      padding: 30px 30px;
+      align-self: center;
+      width: calc(100% - 30px);
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .bonus{
+    &__info{
+      padding: 30px 20px;
+      h2{
+        font-size: 24px;
+        line-height: 26px;
+      }
+      h3{
+        font-size: 22px;
+        line-height: 24px;
+      }
+      h4{
+        font-size: 20px;
+        line-height: 22px;
+      }
+      h5{
+        font-size: 18px;
+        line-height: 20px;
+      }
+      h6{
+        font-size: 16px;
+        line-height: 18px;
+      }
+      p{
+        font-size: 13px;
+        line-height: 20px;
+      }
+      ol{
+        li{
+          font-size: 13px;
+          line-height: 20px;
+          &::before{
+            top: 0;
+          }
+        }
+      }
+      ul{
+        li{
+          font-size: 13px;
+          line-height: 20px;
+          &::before{
+            top: 0;
+          }
+        }
+      }
+    }
+    &__link{
+      width: calc(100% - 30px);
+      padding: 15px 15px 14px;
+    }
+  }
+}

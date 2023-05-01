@@ -3,6 +3,7 @@
   padding: 25px;
   background: $white;
   border-radius: 14px;
+  margin: 0 0 40px 0;
   &__title{
     font-family: $font-firs-reg;
     font-size: 17px;
@@ -34,8 +35,9 @@
 
 @media screen and (max-width: 1024px) {
   .statistics{
-    margin: 0 15px;
+    margin: 0 15px 20px 15px;
     width: calc(50% - 25px);
+
   }
 }
 

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@include('partials/my-complaints/head.html')
+
+<body class="body">
+@include('partials/short1-min/header.html')
+@include('partials/my-complaints/overview.html')
+
+<div class="wrapper">
+    <div class="wrapper__container">
+
+        <main class="main">
+            @include('partials/my-complaints/problem.html')
+            @include('partials/my-complaints/bonus.html')
+        </main>
+        <aside class="aside">
+            @include('partials/account/user.html')
+            @include('partials/account/statistics.html')
+        </aside>
+    </div>
+</div>
+</body>
+
+
