@@ -115,10 +115,10 @@ formPopupTwo.addEventListener("submit", (event) => {
     //блокировка кнопки до момента, пока все инпуты не будут заполнены
     if (emptyInputs.length !== 0 || !checkBox.checked || emptySelects.length !== 0) {
         console.log("inputs not filled");
-
         return false
     } else {
         console.log("go");
+        // тут открытие последнего попапа, сюда прикручивай что на сервер отправляется
         popupDone.classList.remove('_hidden')
         popupSupply.classList.add('_hidden')
     }

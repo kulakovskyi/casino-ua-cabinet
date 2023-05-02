@@ -1,0 +1,95 @@
+.warning{
+  margin: 0 0 40px 0;
+  background: $white;
+  border-radius: 20px;
+  padding: 44px;
+  &__container{
+    padding: 0;
+  }
+  &__title{
+    font-family: $font-firs-semb;
+    font-size: 32px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: $blue-darken;
+    margin: 0 0 5px 0;
+  }
+  &__text{
+    font-family: $font-firs-reg;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: $grey-text;
+    margin: 0 0 20px 0;
+  }
+  &__row{
+    display: flex;
+    justify-content: center;
+  }
+  &__link{
+    display: inline-block;
+    font-family: $font-firs-semb;
+    width: 240px;
+    padding: 15px 15px 14px;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    &-white{
+      margin: 0 10px 0 0;
+      color: $blue;
+      border: 1px solid $blue;
+      transition: background-color .3s ease;
+      &:hover{
+        background: $grey-white-bg;
+      }
+    }
+    &-blue{
+      border: 1px solid $blue;
+      background: $blue;
+      color: $white;
+      transition: background-color .3s ease, border-color .3s ease;
+      &:hover{
+        border: 1px solid $blue-hover;
+        background: $blue-hover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .warning{
+    width: calc(100% - 30px);
+    margin: 0 15px 30px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .warning{
+    padding: 40px 30px;
+    &__title{
+      font-size: 28px;
+      line-height: 30px;
+      margin: 0 0 10px 0;
+    }
+    &__text{
+      font-size: 13px;
+      line-height: 18px;
+      margin: 0 0 20px 0;
+    }
+    &__row{
+      flex-direction: column-reverse;
+    }
+    &__link{
+      width: 100%;
+      &-blue{
+        margin: 0 0 10px 0;
+      }
+      &-white{
+        margin: 0;
+      }
+    }
+  }
+}

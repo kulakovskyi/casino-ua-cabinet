@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  padding: 50px 0 60px 0;
+  overflow: hidden;
+  background: #E7EAEE;
+  border-radius: 50px;
+  margin-top: -52px;
+
+  &__container{
+    width: 100%;
+    display: flex;
+  }
+}
+
+.main{
+  flex: 1 1 auto;
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px){
+  .wrapper{
+    padding: 40px 0 30px 0;
+    border-radius: 20px;
+    &__container{
+      flex-direction: column-reverse;
+      padding: 0 !important;
+    }
+  }
+}
+

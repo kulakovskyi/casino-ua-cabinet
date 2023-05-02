@@ -1,0 +1,373 @@
+.discussion{
+  background: $white;
+  border-radius: 20px;
+  padding: 40px 35px;
+  margin: 0 0 40px 0;
+  &__container{
+    padding: 0;
+  }
+  &__title{
+    font-family: $font-firs-semb;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    color: $blue-darken;
+    margin: 0 0 15px 0;
+  }
+  &__comment{
+    margin: 0 0 20px 0;
+    &-user{
+      margin: 0 0 20px 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $green-whiter;
+      &-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0 0 10px 0;
+      }
+      &-img{
+        max-width: 70px;
+        margin: 0 15px 0 0;
+        img{
+          border-radius: 50%;
+        }
+      }
+      &-info{
+        &-row{
+          display: flex;
+          align-items: center;
+          margin: 0 0 2px 0 ;
+        }
+        &-name{
+          font-family: $font-firs-reg;
+          font-size: 15px;
+          line-height: 20px;
+          color: $blue-darken;
+          margin: 0 5px 0 0;
+        }
+        &-rating{
+          display: flex;
+          align-items: center;
+          font-family: $font-firs-semb;
+          font-size: 15px;
+          line-height: 10px;
+          color: $orange;
+          img{
+            max-width: 11px;
+            margin: 0 5px 0 0;
+          }
+        }
+        &-date{
+          font-family: $font-firs-reg;
+          font-size: 11px;
+          line-height: 20px;
+          color: $green;
+        }
+      }
+      &-question{
+        &-text{
+          font-family: $font-firs-reg;
+          font-size: 15px;
+          line-height: 23px;
+          color: $blue-darken;
+          margin: 0 0 15px 0;
+          span{
+            color: $blue;
+            cursor: pointer;
+          }
+        }
+        &-doc{
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin: 0 0 15px 0;
+          &-item{
+            cursor: pointer;
+            width: 175px;
+            background: $grey-white-bg;
+            border-radius: 14px;
+            position: relative;
+            &::after{
+              border-radius: 14px;
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(128, 128, 128, 0.46) url("../img/scale.svg") no-repeat center center/30px 30px;
+              opacity: 0;
+              transition: opacity .3s ease;
+            }
+            &:hover::after{
+              opacity: 1;
+            }
+            img{
+              border-radius: 14px;
+              width: 100%;
+              height: 175px;
+              object-fit: cover;
+            }
+          }
+        }
+
+      }
+      &-answer{
+        display: flex;
+        align-items: center;
+        &-link{
+          font-family: $font-firs-reg;
+          font-size: 14px;
+          line-height: 17px;
+          color: $blue;
+          margin: 0 10px 0 0;
+          transition: color .3s ease;
+          &:hover{
+            color: $blue-hover;
+          }
+
+        }
+        &-like{
+          cursor: pointer;
+          display: inline-block;
+          padding: 8px 11px 7px 30px;
+          border-radius: 100px;
+          background: rgba(255, 0, 107, 0.14) url("../img/like-one.svg") no-repeat 10px center/13px 11px;
+          color: $green;
+          font-family: $font-firs-reg;
+          font-size: 12px;
+          line-height: 12px;
+          transition: background .3s ease ;
+          &._active{
+            background: rgba(255, 0, 107, 0.14) url("../img/like-two.svg") no-repeat 10px center/13px 11px;
+          }
+          &:hover{
+            background: rgba(255, 0, 107, 0.14) url("../img/like-two.svg") no-repeat 10px center/13px 11px;
+          }
+        }
+      }
+    }
+    &-mod{
+      margin: 0 0 15px 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $green-whiter;
+
+      &-two{
+        margin-left: 20px !important;
+      }
+      &-wrap{
+        margin: 0 0 10px 0;
+      }
+      &-info{
+        display: flex;
+        align-items: center;
+        margin: 0 0 5px 0;
+        &-casino{
+          font-family: $font-firs-semb;
+          color: $white;
+          border-radius: 10px;
+          background: $blue;
+          font-size: 14px;
+          line-height: 14px;
+          padding: 8px 17px 7px;
+          margin: 0 10px 0 0;
+          span{
+            font-style: italic;
+          }
+        }
+        &-doc{
+          font-family: $font-firs-reg;
+          font-size: 12px;
+          line-height: 12px;
+          color: $green;
+          padding: 7px 11px 6px;
+          border: 1px solid $green-whiter;
+          border-radius: 100px;
+
+        }
+      }
+      &-date{
+        font-family: $font-firs-reg;
+        font-size: 11px;
+        line-height: 14px;
+        color: $green;
+      }
+      &-text{
+        font-family: $font-firs-reg;
+        font-size: 15px;
+        line-height: 28px;
+        color: $blue-darken;
+        span{
+          color: $blue;
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+
+  &__send{
+    padding-top: 10px;
+    &-form{
+      display: flex;
+      align-items: flex-start;
+      &-wrap{
+        display: flex;
+        align-items: center;
+        margin: 0 23px 0 0;
+      }
+      &-file{
+        display: none;
+        &-doc{
+          display: inline-block;
+          width: 21px;
+          height: 26px;
+          background: url("../img/document.svg") no-repeat center/contain;
+          cursor: pointer;
+          margin: 0 20px 0 0;
+        }
+        &-img{
+          display: inline-block;
+          width: 25px;
+          height: 20px;
+          background: url("../img/img-svg.svg") no-repeat center/contain;
+          cursor: pointer;
+        }
+      }
+
+      &-text{
+        flex: 1 1 auto;
+        margin: 0 30px 0 0;
+        textarea{
+          width: 100%;
+          padding: 13px 20px;
+          border: 1px solid #CAE0E0;
+          border-radius: 8px;
+          resize: none;
+          &::placeholder{
+            color: $green;
+            font-family: $font-firs-reg;
+            font-size: 14px;
+            line-height: 17px;
+
+          }
+        }
+      }
+
+      &-submit{
+        background: transparent;
+        max-width: 40px;
+        transition: transform .3s ease;
+        &:hover{
+          transform: translateX(3px);
+        }
+      }
+
+
+    }
+
+  }
+
+}
+
+.popup__discussion-up {
+  position: fixed;
+  z-index: 120;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  align-items: flex-end;
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(50px);
+  transition: opacity .7s ease, visibility .7s ease;
+  &._hidden{
+    opacity: 0;
+    visibility: hidden;
+  }
+  &-wrap{
+    margin: auto;
+    max-width: 1030px;
+    padding: 0 15px;
+    position: relative;
+  }
+
+  .close-popup-dis{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    background: url("../img/btn-close.svg") no-repeat center/contain;
+    transition: transform .3s ease;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
+}
+
+@media screen and (max-width: 1024px){
+  .discussion{
+    margin: 0 15px 30px;
+    width: calc(100% - 30px);
+  }
+}
+
+@media screen and (max-width: 640px){
+  .discussion{
+    padding: 20px 15px;
+    &__title{
+      font-size: 28px;
+      line-height: 30px;
+    }
+   &__comment-user-question-doc-item{
+     width: 110px;
+     img{
+       height: 110px;
+     }
+    }
+    &__send{
+      &-form{
+        display: grid;
+        grid-template-columns: auto 30px;
+        grid-auto-rows: auto auto;
+        &-file{
+          &-doc{
+            margin: 0 0 5px 0;
+          }
+        }
+        &-text{
+          grid-row: 1/3;
+          grid-column: 1/2;
+          margin: 0 20px 0 0;
+          textarea{
+            min-height: 150px;
+          }
+
+        }
+        &-submit{
+          max-width: 30px;
+          grid-column: 2/3;
+          grid-row: 1/2;
+        }
+        &-wrap{
+          margin: 0;
+          grid-column: 2/3;
+          grid-row: 2/3;
+          align-self: end;
+          flex-direction: column;
+          justify-content: flex-end;
+        }
+      }
+
+    }
+  }
+}

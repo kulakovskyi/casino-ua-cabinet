@@ -1,0 +1,69 @@
+.welcome {
+  padding: 35px 50px;
+  background: $white;
+  border-radius: 20px;
+  margin: 0 0 40px 0;
+  &__container {
+    padding: 0 ;
+  }
+  &__title{
+    font-family: $font-firs-semb;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: -0.01em;
+    color: $blue-darken;
+    margin: 0 0 20px 0;
+  }
+  &__text{
+    font-family: $font-firs-reg;
+    font-size: 15px;
+    line-height: 25px;
+    color: $blue-darken;
+    margin: 0 0 20px 0;
+  }
+  &__link{
+    display: inline-block;
+    padding: 15px 120px 14px;
+    border-radius: 8px;
+    font-family: $font-firs-semb;
+    background: $blue;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $white;
+    transition: background-color .3s ease;
+    &:hover{
+      background: $blue-hover;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .welcome{
+    padding: 35px 30px;
+    width: calc(100% - 30px);
+    margin: 0 15px 30px;
+  }
+}
+
+@media screen and (max-width: 640px){
+  .welcome{
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    &__title{
+      font-size: 28px;
+      line-height: 30px;
+      margin: 0 0 20px 0;
+    }
+    &__text{
+      font-size: 13px;
+      line-height: 20px;
+    }
+    &__link{
+      width: 100%;
+      padding: 15px 15px 14px;
+    }
+  }
+}

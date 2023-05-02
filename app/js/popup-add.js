@@ -1,0 +1,1 @@
+(()=>{const e=document.querySelector(".popup-btn-click"),c=document.querySelector(".popup-add__info-btn-close"),d=document.querySelector(".popup-add"),o=document.querySelector("body");e.addEventListener("click",(()=>{o.classList.add("_lock"),d.classList.remove("_hidden")})),c.addEventListener("click",(()=>{o.classList.remove("_lock"),d.classList.add("_hidden")}))})();
