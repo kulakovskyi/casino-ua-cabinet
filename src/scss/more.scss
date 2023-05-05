@@ -1,0 +1,44 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "base/nullstyle";
+@import "base/wrapper";
+
+
+[class*="__container"] {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  &._lock {
+    overflow: hidden;
+  }
+  font-family: $font-firs-reg;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: $blue-darken;
+  background: $grey-white-bg;
+}
+
+// подключения компонентов страницы
+
+
+
+//aside
+
+
+// подключения компонентов страницы
+
+@import "short1-min/_header";
+
+@import "more/_overview";
+@import "more/_complaints";
+@import "more/_feed";
+@import "more/_blog";
+
+

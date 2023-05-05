@@ -134,6 +134,34 @@
   }
 }
 
+.content-table {
+  border-radius: 20px;
+  overflow-x: scroll;
+  table {
+    border-collapse: collapse;
+
+    width: 100%;
+    margin-bottom: 20px;
+    min-width: 500px;
+    tr{
+      &:first-child{
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: rgb(4,80,255);
+        color: #fff;
+      }
+      &:nth-child(even){
+        background-color: #f2f2f2;
+      }
+    }
+    td{
+      border: 1px solid #ddd;
+      padding: 15px;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .bonus{
     margin: 0 0 30px 0;

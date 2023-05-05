@@ -1,0 +1,29 @@
+.overview{
+  padding: 196px 0 110px 0;
+  background: #4C2233 url('../img/bg-desc.webp') no-repeat 50% 0/cover;
+  &__title{
+    font-family: $font-firs-semb;
+    font-size: 54px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $white;
+  }
+}
+
+@media screen  and (max-width: 1024px){
+  .overview{
+    padding: 154px 0 100px 0;
+  }
+}
+
+@media screen  and (max-width: 640px){
+  .overview{
+    background: #4C2233 url('../img/bg-mob.webp') no-repeat 50% 0/cover;
+    &__title{
+      font-size: 38px;
+      line-height: 48px;
+    }
+  }
+}

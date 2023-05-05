@@ -1,0 +1,289 @@
+.overview {
+  padding: 210px 0 110px 0;
+  background: #0B0B19 url("../img/bg-more.webp") no-repeat 50% 0/cover;
+  &__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title{
+    font-family: $font-firs-semb;
+    color: $white;
+    font-size: 54px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    margin: 0 0 30px 0;
+  }
+  &__list{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 50px 0;
+  }
+  &__item{
+    min-width: 220px;
+    max-width: 220px;
+    padding: 35px 50px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2px);
+    border-radius: 24px;
+    &:not(:last-child){
+      margin: 0 20px 0 0;
+    }
+    &-title{
+      font-family: $font-firs-semb;
+      font-size: 32px;
+      line-height: 35px;
+      letter-spacing: -0.01em;
+      color: $white;
+      margin: 0 0 15px 0;
+    }
+    &-text{
+      flex: 1 1 auto;
+      font-family: $font-firs-reg;
+      font-size: 17px;
+      line-height: 22px;
+      text-align: center;
+      letter-spacing: 0.01em;
+      color: $white;
+    }
+  }
+  &__link{
+    display: inline-block;
+    padding: 15px 15px 14px;
+    width: 400px;
+    font-family: $font-firs-semb;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $white;
+    background: $blue;
+    border-radius: 8px;
+    margin: 0 0 100px 0;
+    transition: background-color .3s ease;
+    &:hover{
+      background: $blue-hover;
+    }
+  }
+}
+
+@include breakpoint(1024px) {
+  .overview{
+    padding: 150px 0 70px 0;
+    &__list{
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 20px;
+    }
+    &__item{
+      &:not(:last-child){
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+@include breakpoint(640px) {
+  .overview {
+    padding: 0;
+    background: none ;
+    &__container{
+      width: 100%;
+      padding: 240px 15px 0;
+      background: #0B0B19 url("../img/bg-overview-mob.webp") no-repeat 50% 20%/cover;
+    }
+    &__title{
+      max-width: 280px;
+      align-self: flex-start;
+      text-align: start;
+      font-size: 38px;
+      line-height: 48px;
+      margin: 0 0 15px 0;
+    }
+    &__list{
+      width: 100%;
+      grid-template-columns: calc(50% - 2.5px) calc(50% - 2.5px);
+      gap: 5px;
+      margin: 0 0 10px 0;
+    }
+    &__item{
+      min-width: auto;
+      max-width: 100%;
+      width: 100%;
+      &-title{
+        font-size: 28px;
+        line-height: 35px;
+        margin: 0 0 2px 0;
+      }
+      &-text{
+        font-size: 15px;
+        line-height: 18px;
+      }
+    }
+    &__link{
+      position: relative;
+      bottom: -25px;
+      width: 100%;
+      margin: 0;
+    }
+
+  }
+}
+
+.best{
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title{
+    text-align: center;
+    font-family: $font-firs-semb;
+    font-size: 32px;
+    line-height: 35px;
+    letter-spacing: -0.01em;
+    color: $white;
+    margin: 0 0 10px 0;
+  }
+  &__text{
+    font-family: $font-firs-reg;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 35px 0;
+  }
+  &__list{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 50px 0;
+  }
+  &__item{
+    min-width: 220px;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:not(:last-child){
+      margin: 0 110px 0 0;
+    }
+    &-img{
+      max-width: 160px;
+      margin: 0 0 15px 0;
+    }
+    &-title{
+      font-family: $font-firs-semb;
+      font-size: 20px;
+      line-height: 26px;
+      text-align: center;
+      letter-spacing: 0.01em;
+      color: $white;
+      margin: 0 0 15px 0;
+    }
+    &-text{
+      flex: 1 1 auto;
+      font-family: $font-firs-reg;
+      font-size: 15px;
+      line-height: 20px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  &__link{
+    display: inline-block;
+    padding: 15px 15px 14px;
+    width: 400px;
+    font-family: $font-firs-semb;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $white;
+    background: $blue;
+    border-radius: 8px;
+    transition: background-color .3s ease;
+    &:hover{
+      background: $blue-hover;
+    }
+  }
+}
+
+@include breakpoint(1024px) {
+  .best{
+    &__list{
+      flex-wrap: wrap;
+      gap: 40px 80px;
+      max-width: 680px;
+    }
+    &__item{
+      &:not(:last-child){
+        margin: 0;
+      }
+    }
+  }
+}
+
+@include breakpoint(640px) {
+  .best{
+
+    &__container{
+      width: 100%;
+      padding-top: 70px;
+      padding-bottom: 65px;
+      background: #0B0B19 url("../img/bg-best-mob.webp") no-repeat 50% 0/cover;
+    }
+    &__title{
+      font-size: 28px;
+      line-height: 30px;
+      margin: 0 0 15px 0;
+    }
+    &__text{
+      font-size: 15px;
+      line-height: 20px;
+      margin: 0 0 25px 0;
+    }
+    &__list{
+      flex-direction: column;
+      gap: 0;
+    }
+    &__item{
+      &:not(:last-child){
+        margin: 0 0 10px 0;
+      }
+      &-img{
+        max-width: 120px;
+        margin: 0;
+      }
+      &-title{
+        font-size: 20px;
+        line-height: 26px;
+        margin: 0 0 15px 0;
+      }
+      &-text{
+        font-size: 15px;
+        line-height: 20px;
+      }
+
+    }
+    &__link{
+      width: 100%;
+    }
+
+  }
+}
