@@ -600,6 +600,23 @@
 @media screen and (max-width: 1024px) {
   .header {
     background: transparent;
+    &::before{
+      content: '';
+      position: fixed !important;
+      width: 100%;
+      height: 80px;
+      background: #0B0B19 url("../img/bg-cabinet.webp") no-repeat 50% 0/ cover;
+      top: 0;
+      left: 0;
+      z-index: 7;
+      transform: translate(100%, 0);
+      transition: .3s ease;
+    }
+    &._openCabinet::before{
+      transform: translate(0, 0);
+
+    }
+
     &__cabinet {
       &-save{
         padding: 100px 15px 20px;
@@ -609,15 +626,7 @@
         background: transparent;
         width: 100%;
         box-shadow: none;
-        &::before{
-          content: '';
-          position: fixed;
-          width: 100%;
-          height: 80px;
-          background: #0B0B19 url("../img/bg-cabinet.webp") no-repeat 50% 0/ cover;
-          top: 0;
-          left: 0;
-        }
+
         &__container{
           overflow-y: scroll;
           z-index: 6;
@@ -632,6 +641,7 @@
           &._open{
             transform: translateX(0);
           }
+
         }
 
         &-wrap{

@@ -14,7 +14,6 @@ iconMenu.addEventListener("click", function (e) {
 });
 
 //tap in burger on mobile
-
 const itemTitleAcord = document.querySelectorAll('.menu__item-open')
 let screenWidth = window.screen.width;
 
@@ -30,7 +29,6 @@ if (screenWidth <= 1024) {
 }
 
 //new
-
 const headerCabinetBtnMob = document.querySelector('.header__cabinet-mob')
 const headerBtnsCabinet = document.querySelector('.header__cabinet-btns')
 

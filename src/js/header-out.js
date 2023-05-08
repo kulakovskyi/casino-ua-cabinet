@@ -12,6 +12,7 @@ function burgerMain(){
     menuBody.classList.toggle("_active");
     iconMenuSpan.classList.toggle("_active")
     headerFix.classList.toggle('_open')
+    headerFix.classList.remove('_openCabinet')
 }
 
 function burgerMainRemove(){
@@ -20,8 +21,6 @@ function burgerMainRemove(){
     iconMenuSpan.classList.remove("_active")
     headerFix.classList.remove('_open')
 }
-
-
 
 iconMenu.addEventListener("click", function (e) {
     if(headerDropMenuCabinet.classList.contains('_open')) headerDropMenuCabinet.classList.remove('_open')
@@ -41,6 +40,7 @@ if (window.innerWidth <= 1024) {
     headerCabinetBtnMob.removeEventListener('click', deskButtonEventCabinet)
     headerCabinetBtnMob.addEventListener('click', () => {
         headerDropMenuCabinet.classList.toggle('_open')
+        headerFix.classList.toggle('_openCabinet')
         if (menuBody.classList.contains('_active')) {
             headerDropMenuCabinet.classList.add('_open')
             burgerMainRemove()
@@ -50,7 +50,6 @@ if (window.innerWidth <= 1024) {
 
     })
 }
-
 
 
 //tap in burger on mobile
