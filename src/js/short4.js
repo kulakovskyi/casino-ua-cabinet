@@ -13,3 +13,6 @@ popupBtnClose.addEventListener('click', () => {
     popUpSubscribe.classList.add('_hidden')
 })
 
+
+
+

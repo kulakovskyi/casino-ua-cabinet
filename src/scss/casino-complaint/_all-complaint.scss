@@ -3,6 +3,8 @@
 
   &__container {
     padding: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   &__title {
@@ -129,48 +131,28 @@
       }
     }
   }
-
-  &__pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &-btn {
-      width: 65px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: $font-firs-reg;
-      font-size: 15px;
-      line-height: 15px;
-      color: $blue-darken;
-      background: transparent;
-      border: 2px solid $green-white;
-      border-radius: 10px;
-      transition: .3s ease;
-
-      &:not(:last-child) {
-        margin: 0 10px 0 0;
-      }
-
-      &:hover {
-        color: $blue;
-        border: 2px solid $blue;
-      }
-
-      &._active {
-        color: $blue;
-        border: 2px solid $blue;
-      }
-
-      &-arrow-right {
-        img {
-          transform: scale(-1);
-        }
-      }
-
+  &__all-link{
+    align-self: center;
+    display: inline-block;
+    padding: 15px 120px 14px;
+    border-radius: 8px;
+    font-family: $font-firs-semb;
+    background: $blue;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $white;
+    transition: background-color 0.3s ease;
+    &:hover{
+      background: $blue-hover;
     }
+    @media screen and (max-width: 700px){
+      width: 100%;
+      padding: 15px 15px 14px;
+    }
+
+
   }
 }
 

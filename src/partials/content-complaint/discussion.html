@@ -14,10 +14,7 @@
                     <div class="discussion__comment-user-info">
                         <div class="discussion__comment-user-info-row">
                             <div class="discussion__comment-user-info-name">Anastasia</div>
-                            <div class="discussion__comment-user-info-rating">
-                                <img src="img/rating-user-img.svg" alt="rating-user" width="12" height="13">
-                                5.6
-                            </div>
+
                         </div>
                         <div class="discussion__comment-user-info-date">April 8, 2021</div>
 
@@ -48,10 +45,7 @@
                                      alt="image-casino" class="imgMin">
                         </div>
                     </div>
-                    <div class="discussion__comment-user-answer">
-                        <a href="#" class="discussion__comment-user-answer-link">To answer</a>
-                        <div class="discussion__comment-user-answer-like _active">2</div>
-                    </div>
+
                 </div>
             </div>
             <div class="discussion__comment-mod">
@@ -81,10 +75,6 @@
                     <div class="discussion__comment-user-info">
                         <div class="discussion__comment-user-info-row">
                             <div class="discussion__comment-user-info-name">Anastasia</div>
-                            <div class="discussion__comment-user-info-rating">
-                                <img src="img/rating-user-img.svg" alt="rating-user" width="12" height="13">
-                                5.6
-                            </div>
                         </div>
                         <div class="discussion__comment-user-info-date">April 8, 2021</div>
 
@@ -97,10 +87,7 @@
                         problems. Nothing freezes, never knocks out of the game, loads on ... <span>See more</span>
                     </div>
 
-                    <div class="discussion__comment-user-answer">
-                        <a href="#" class="discussion__comment-user-answer-link">To answer</a>
-                        <div class="discussion__comment-user-answer-like">2</div>
-                    </div>
+
                 </div>
             </div>
             <div class="discussion__comment-mod">
@@ -122,13 +109,9 @@
         <div class="discussion__send">
             <form action="#" class="discussion__send-form">
                 <div class="discussion__send-form-wrap">
-                    <div class="discussion__send-form-doc">
-                        <input type="file" name="document" id="document" class="discussion__send-form-file">
-                        <label for="document" class="discussion__send-form-file-doc"></label>
-                    </div>
                     <div class="discussion__send-form-image">
-                        <input type="file" name="image" id="image" class="discussion__send-form-file">
-                        <label for="document" class="discussion__send-form-file-img"></label>
+                        <input type="file" multiple accept="image/*" id="file-input" name="image" class="discussion__send-form-file">
+                        <button type="button" id="choose-button" class="discussion__send-form-file-img"></button>
                     </div>
                 </div>
               <div class="discussion__send-form-text">
@@ -138,6 +121,9 @@
                     <img src="img/send.svg" alt="send" width="40" height="40" loading="lazy">
                 </button>
             </form>
+            <div id="preview" class="preview">
+
+            </div>
         </div>
     </div>
 </section>

@@ -46,18 +46,6 @@
           color: $blue-darken;
           margin: 0 5px 0 0;
         }
-        &-rating{
-          display: flex;
-          align-items: center;
-          font-family: $font-firs-semb;
-          font-size: 15px;
-          line-height: 10px;
-          color: $orange;
-          img{
-            max-width: 11px;
-            margin: 0 5px 0 0;
-          }
-        }
         &-date{
           font-family: $font-firs-reg;
           font-size: 11px;
@@ -113,40 +101,6 @@
           }
         }
 
-      }
-      &-answer{
-        display: flex;
-        align-items: center;
-        &-link{
-          font-family: $font-firs-reg;
-          font-size: 14px;
-          line-height: 17px;
-          color: $blue;
-          margin: 0 10px 0 0;
-          transition: color .3s ease;
-          &:hover{
-            color: $blue-hover;
-          }
-
-        }
-        &-like{
-          cursor: pointer;
-          display: inline-block;
-          padding: 8px 11px 7px 30px;
-          border-radius: 100px;
-          background: rgba(255, 0, 107, 0.14) url("../img/like-one.svg") no-repeat 10px center/13px 11px;
-          color: $green;
-          font-family: $font-firs-reg;
-          font-size: 12px;
-          line-height: 12px;
-          transition: background .3s ease ;
-          &._active{
-            background: rgba(255, 0, 107, 0.14) url("../img/like-two.svg") no-repeat 10px center/13px 11px;
-          }
-          &:hover{
-            background: rgba(255, 0, 107, 0.14) url("../img/like-two.svg") no-repeat 10px center/13px 11px;
-          }
-        }
       }
     }
     &-mod{
@@ -210,9 +164,55 @@
 
   &__send{
     padding-top: 10px;
+    .preview{
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .previewItem{
+      position: relative;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      @media screen and (max-width: 640px){
+        width: 150px;
+        height: 150px;
+      }
+
+      @media screen and (max-width: 374px){
+        width: 120px;
+        height: 120px;
+      }
+    }
+    .preview-image {
+      display: inline-block;
+      position: relative;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      @media screen and (max-width: 640px){
+        width: 150px;
+        height: 150px;
+      }
+      @media screen and (max-width: 374px){
+        width: 120px;
+        height: 120px;
+      }
+    }
+    .delete-button {
+      position: absolute;
+      top: 9px;
+      right: 9px;
+      width: 18px;
+      height: 18px;
+      background: url('../img/btn-close.svg') no-repeat 0 0/contain;
+      cursor: pointer;
+    }
     &-form{
       display: flex;
       align-items: flex-start;
+
       &-wrap{
         display: flex;
         align-items: center;
@@ -220,14 +220,7 @@
       }
       &-file{
         display: none;
-        &-doc{
-          display: inline-block;
-          width: 21px;
-          height: 26px;
-          background: url("../img/document.svg") no-repeat center/contain;
-          cursor: pointer;
-          margin: 0 20px 0 0;
-        }
+
         &-img{
           display: inline-block;
           width: 25px;
@@ -340,9 +333,6 @@
         grid-template-columns: auto 30px;
         grid-auto-rows: auto auto;
         &-file{
-          &-doc{
-            margin: 0 0 5px 0;
-          }
         }
         &-text{
           grid-row: 1/3;

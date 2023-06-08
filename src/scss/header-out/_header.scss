@@ -36,6 +36,7 @@
     }
 
     &-mob {
+      position: relative;
       cursor: pointer;
       width: 38px;
       height: 38px;
@@ -47,6 +48,18 @@
       transition: background-color .3s ease;
       &:hover{
         background: $blue-hover;
+      }
+      &:hover::after{
+        content: '';
+
+      }
+      &::after{
+        position: absolute;
+        width: 300px;
+        height: 40px;
+        top: 20px;
+        right: 0;
+        background: transparent;
       }
     }
 
@@ -614,7 +627,6 @@
     }
     &._openCabinet::before{
       transform: translate(0, 0);
-
     }
 
     &__cabinet {
