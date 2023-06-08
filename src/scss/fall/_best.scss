@@ -6,6 +6,10 @@
   align-items: stretch;
   transition: opacity .7s ease, visibility .7s ease;
 
+  input{
+    touch-action: manipulation;
+  }
+
   @media screen and (max-width: 1024px){
     padding: 144px 0 130px;
   }
@@ -143,12 +147,15 @@
       padding: 12px 15px 11px;
       font-size: 15px;
       line-height: 20px;
-      color: #4D9696;
+
       border: 0;
       outline: 0;
       width: 100%;
       background: #E7EAEE;
       border-radius: 4px;
+      option:first-child{
+        color: #4D9696;
+      }
       &._error{
         outline: 1px solid $red;
       }
