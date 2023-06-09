@@ -67,6 +67,51 @@
   }
 
   &__form {
+    .preview{
+      margin-bottom: 15px;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .previewItem{
+      position: relative;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      @media screen and (max-width: 640px){
+        width: 150px;
+        height: 150px;
+      }
+
+      @media screen and (max-width: 374px){
+        width: 120px;
+        height: 120px;
+      }
+    }
+    .preview-image {
+      display: inline-block;
+      position: relative;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      @media screen and (max-width: 640px){
+        width: 150px;
+        height: 150px;
+      }
+      @media screen and (max-width: 374px){
+        width: 120px;
+        height: 120px;
+      }
+    }
+    .delete-button {
+      position: absolute;
+      top: 9px;
+      right: 9px;
+      width: 18px;
+      height: 18px;
+      background: url('../img/btn-close.svg') no-repeat 0 0/contain;
+      cursor: pointer;
+    }
     &-row {
       display: grid;
       grid-template-columns: calc(50% - 8px) calc(50% - 8px);
@@ -137,6 +182,7 @@
     }
 
     &-select {
+      color: $blue-darken;
       font-family: $font-firs-reg;
       position: relative;
       cursor: pointer;

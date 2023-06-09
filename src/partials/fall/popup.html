@@ -46,11 +46,13 @@
                         <div class="supply__form-rowTwo">
                             <input type="number" class="supply__form-number supply__form-input _none" name="number" placeholder="Kоличестко денежек">
                             <div class="supply__form-item supply__form-item-file">
-                                <label for="file" class="supply__form-file">Прикрепить файл</label>
-                                <input type="file" id="file" name="file" multiple class="supply__form-input-file">
+                                <button  type="button" id="choose-button" class="supply__form-file">Прикрепить файл</button>
+                                <input type="file" multiple accept="image/*" id="file-input" name="image" class="supply__form-input-file">
                             </div>
                         </div>
 
+                    </div>
+                    <div id="preview" class="preview">
                     </div>
                     <div class="supply__form-subtitle">Эта информация не будет видна</div>
                     <div class="supply__form-row">
